@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Currency_convertor</string>
+    <string name="currency_convertor">Currency Convertor</string>
+    <string name="result_here">Result Here</string>
+    <string name="convert">Convert</string>
+    <string name="enter_amount">Enter Amount</string><![CDATA[
+
+    ">
+    ]]>
+    <string name="currency_spinner_desc">Select Currency to be Converted Amount</string>
+    <string name="convert_button_desc">Conversion Button</string>
+</resources>

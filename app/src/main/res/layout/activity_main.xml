@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/currency_convertor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/enter_amount"
+            android:importantForAccessibility="yes"
+            android:inputType="text"
+            android:textColorHint="#000000"
+            android:id="@+id/fromCurrency"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/currency_spinner_desc"
+            android:importantForAccessibility="yes"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintBounds"
+            android:id="@+id/fromUnit"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints=" "
+            android:hint="@string/result_here"
+            android:inputType="none"
+            android:importantForAccessibility="yes"
+            android:textColorHint="#000000"
+            android:id="@+id/toCurrency"
+            android:focusable="false"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/currency_spinner_desc"
+            tools:ignore="VisualLintBounds"
+            android:id="@+id/toUnit"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/convert_button_desc"
+        android:importantForAccessibility="yes"
+        android:text="@string/convert"
+        android:id="@+id/convertButton"
+        tools:ignore="RedundantDescriptionCheck" />
+</LinearLayout>
