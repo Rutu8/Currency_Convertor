@@ -3,14 +3,11 @@ package com.task.currency_convertor;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import com.task.currency_convertor.databinding.ActivityMainBinding;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

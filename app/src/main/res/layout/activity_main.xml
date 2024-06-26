@@ -9,19 +9,10 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/currency_convertor"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -78,13 +69,14 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/convertButton"
+        android:layout_width="203dp"
+        android:layout_height="62dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
         android:contentDescription="@string/convert_button_desc"
         android:importantForAccessibility="yes"
         android:text="@string/convert"
-        android:id="@+id/convertButton"
+        android:textSize="24sp"
         tools:ignore="RedundantDescriptionCheck" />
 </LinearLayout>
