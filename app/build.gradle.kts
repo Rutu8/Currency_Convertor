@@ -5,9 +5,10 @@ plugins {
 android {
     namespace = "com.task.currency_convertor"
     compileSdk = 34
-buildFeatures{
-    viewBinding=true
-}
+
+    buildFeatures{
+        viewBinding=true
+    }
     defaultConfig {
         applicationId = "com.task.currency_convertor"
         minSdk = 24
@@ -35,6 +36,7 @@ buildFeatures{
 
 dependencies {
 
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -42,4 +44,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
 }

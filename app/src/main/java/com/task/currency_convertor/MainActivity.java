@@ -24,10 +24,7 @@ public class MainActivity extends AppCompatActivity {
     double toValue = 0.0;
     String toUnit = " ";
 
-    private final List<String> units = Arrays.asList(
-            "INR",
-            "USD"
-    );
+    private final List<String> units = Arrays.asList("INR", "USD", "GBP", "JPY");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,19 +61,57 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void convertValue() {
+        boolean conversionFound = false;
         try {
-            // Replace with actual conversion rates or API call to get the rates
+            // Replace with actual current rates
             if (fromUnit.equalsIgnoreCase("INR") && toUnit.equalsIgnoreCase("USD")) {
-                toValue = fromValue / 83.22;
+                toValue = fromValue / 83.51;
+                conversionFound = true;
             } else if (fromUnit.equalsIgnoreCase("USD") && toUnit.equalsIgnoreCase("INR")) {
-                toValue = fromValue * 83.22;
+                toValue = fromValue * 83.51;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("INR") && toUnit.equalsIgnoreCase("GBP")) {
+                toValue = fromValue / 105.95;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("GBP") && toUnit.equalsIgnoreCase("INR")) {
+                toValue = fromValue * 105.95;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("GBP") && toUnit.equalsIgnoreCase("USD")) {
+                toValue = fromValue / 1.27;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("USD") && toUnit.equalsIgnoreCase("GBP")) {
+                toValue = fromValue * 1.27;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("INR") && toUnit.equalsIgnoreCase("JPY")) {
+                toValue = fromValue / 0.52;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("JPY") && toUnit.equalsIgnoreCase("INR")) {
+                toValue = fromValue * 0.52;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("USD") && toUnit.equalsIgnoreCase("JPY")) {
+                toValue = fromValue / 159.90;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("JPY") && toUnit.equalsIgnoreCase("USD")) {
+                toValue = fromValue * 159.90;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("GBP") && toUnit.equalsIgnoreCase("JPY")) {
+                toValue = fromValue / 202.57;
+                conversionFound = true;
+            } else if (fromUnit.equalsIgnoreCase("JPY") && toUnit.equalsIgnoreCase("GBP")) {
+                toValue = fromValue * 202.57;
+                conversionFound = true;
+            }
+
+            if (conversionFound) {
+                binding.toCurrency.setText(String.valueOf(toValue));
             } else {
                 Toast.makeText(this, "Conversion not available for selected currencies", Toast.LENGTH_LONG).show();
-                return;
             }
             binding.toCurrency.setText(String.valueOf(toValue));
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
+
+
 }

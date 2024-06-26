@@ -9,4 +9,7 @@
     ]]>
     <string name="currency_spinner_desc">Select Currency to be Converted Amount</string>
     <string name="convert_button_desc">Conversion Button</string>
+    <string name="made_easy">Currency Conversion made easy</string>
+    <string name="click_here">Click Here</string>
+
 </resources>
